@@ -2,6 +2,9 @@ export const QUERY = gql`
   query BlogPostsQuery {
     posts {
       id
+      title
+      body
+      createdAt
     }
   }
 `
@@ -15,5 +18,9 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ posts }) => {
-  return <div>{JSON.stringify(posts)}</div>
+  return (
+    <pre>
+      <code>{JSON.stringify(posts, null, 2)}</code>
+    </pre>
+  )
 }
