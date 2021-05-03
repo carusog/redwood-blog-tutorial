@@ -18,9 +18,13 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ posts }) => {
-  return (
-    <pre>
-      <code>{JSON.stringify(posts, null, 2)}</code>
-    </pre>
-  )
+  return posts.map((post) => (
+    <article key={post.id}>
+      <header>
+        <h2>{post.title}</h2>
+      </header>
+      <p>{post.body}</p>
+      <div>Posted at: {post.createdAt}</div>
+    </article>
+  ))
 }
