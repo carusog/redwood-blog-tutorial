@@ -6,10 +6,12 @@
 # https://redwoodjs.com/docs/app-configuration-redwood-toml
 
 [web]
-  port = 8910
-  apiProxyPath = "/.redwood/functions"
+port = 8910
+apiProxyPath = "/.netlify/functions"
+
 [api]
-  port = 8911
-  schemaPath = "./api/db/schema.prisma"
+port = 8911
+schemaPath = "./api/db/schema.prisma"
+
 [browser]
-  open = true
+open = true
