@@ -7,6 +7,7 @@ import {
   Label,
 } from '@redwoodjs/forms'
 import { useMutation } from '@redwoodjs/web'
+import { toast, Toaster } from '@redwoodjs/web/toast'
 
 const CREATE_CONTACT = gql`
   mutation CreateContactMutation($input: CreateContactInput!) {
@@ -17,7 +18,11 @@ const CREATE_CONTACT = gql`
 `
 
 const ContactPage = () => {
-  const [create] = useMutation(CREATE_CONTACT)
+  const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
+    onCompleted: () => {
+      toast.success('Thank you for your submission!')
+    },
+  })
 
   const onSubmit = (data) => {
     console.log(data)
@@ -26,46 +31,49 @@ const ContactPage = () => {
   console.log('render!')
 
   return (
-    <Form onSubmit={onSubmit} validation={{ mode: 'onBlur' }}>
-      <Label name="name" errorClassName="error">
-        Name
-      </Label>
-      <TextField
-        name="name"
-        validation={{ required: true }}
-        errorClassName="error"
-      />
-      <FieldError className="error" name="name" />
+    <>
+      <Toaster />
+      <Form onSubmit={onSubmit} validation={{ mode: 'onBlur' }}>
+        <Label name="name" errorClassName="error">
+          Name
+        </Label>
+        <TextField
+          name="name"
+          validation={{ required: true }}
+          errorClassName="error"
+        />
+        <FieldError className="error" name="name" />
 
-      <Label name="email" errorClassName="error">
-        E-mail
-      </Label>
-      <TextField
-        name="email"
-        validation={{
-          required: true,
-          pattern: {
-            value: /[^@]+@[^.]+\..+/,
-            message: '📧 Please, enter a valid e-mail address',
-          },
-        }}
-        errorClassName="error"
-      />
-      <FieldError className="error" name="email" />
+        <Label name="email" errorClassName="error">
+          E-mail
+        </Label>
+        <TextField
+          name="email"
+          validation={{
+            required: true,
+            pattern: {
+              value: /[^@]+@[^.]+\..+/,
+              message: '📧 Please, enter a valid e-mail address',
+            },
+          }}
+          errorClassName="error"
+        />
+        <FieldError className="error" name="email" />
 
-      <Label name="message" errorClassName="error">
-        Message
-      </Label>
-      <TextAreaField
-        name="message"
-        validation={{ required: true }}
-        errorClassName="error"
-      />
-      <FieldError className="error" name="message" />
+        <Label name="message" errorClassName="error">
+          Message
+        </Label>
+        <TextAreaField
+          name="message"
+          validation={{ required: true }}
+          errorClassName="error"
+        />
+        <FieldError className="error" name="message" />
 
-      <br />
-      <Submit>Save</Submit>
-    </Form>
+        <br />
+        <Submit disabled={loading}>Save</Submit>
+      </Form>
+    </>
   )
 }
 
