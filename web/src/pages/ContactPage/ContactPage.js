@@ -5,6 +5,7 @@ import {
   TextAreaField,
   FieldError,
   Label,
+  FormError,
 } from '@redwoodjs/forms'
 import { useMutation } from '@redwoodjs/web'
 import { toast, Toaster } from '@redwoodjs/web/toast'
@@ -33,7 +34,11 @@ const ContactPage = () => {
   return (
     <>
       <Toaster />
-      <Form onSubmit={onSubmit} validation={{ mode: 'onBlur' }}>
+      <Form onSubmit={onSubmit} validation={{ mode: 'onBlur' }} error={error}>
+        <FormError
+          error={error}
+          wrapperStyle={{ color: 'red', backgroundColor: 'lavenderblush' }}
+        />
         <Label name="name" errorClassName="error">
           Name
         </Label>
@@ -51,10 +56,6 @@ const ContactPage = () => {
           name="email"
           validation={{
             required: true,
-            pattern: {
-              value: /[^@]+@[^.]+\..+/,
-              message: '📧 Please, enter a valid e-mail address',
-            },
           }}
           errorClassName="error"
         />
