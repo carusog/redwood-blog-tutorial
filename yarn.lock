@@ -1989,24 +1989,6 @@
     tiny-warning "^1.0.3"
     tslib "^2.1.0"
 
-"@redwoodjs/api-server@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/api-server/-/api-server-0.31.0.tgz#56bd1a30fd4a2214ba369b48ab9f2adbc74a9c2a"
-  integrity sha512-oQXvFhOtq0QwZ+WSatFLGQYPXtFssrdIVJHiL1HsUW8imPDOrFN8L7odCG1bYGmzjelQxfmZmP+YQsWc+LHnJw==
-  dependencies:
-    body-parser "^1.19.0"
-    chokidar "3.5.1"
-    dotenv-defaults "2.0.1"
-    express "^4.17.1"
-    glob "7.1.6"
-    http-proxy-middleware "^1.1.0"
-    lodash.escape "^4.0.1"
-    morgan "^1.10.0"
-    qs "^6.9.3"
-    yargs "^16.0.3"
-    youch "^2.1.1"
-    youch-terminal "^1.0.1"
-
 "@redwoodjs/api-server@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/api-server/-/api-server-0.31.2.tgz#8a6c9bcd61f38f8db3252360cb87dc90f044433a"
@@ -2025,14 +2007,14 @@
     youch "^2.1.1"
     youch-terminal "^1.0.1"
 
-"@redwoodjs/api@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/api/-/api-0.31.0.tgz#2ca43e6c8b89565010b375a6cc1508276d535b1d"
-  integrity sha512-ItATIaOZGE1WusxeNaqs5oV3k0xHwY3/hJkcvvxpHv457mOWqdQl/dNcvsh59q4IL2qgVQACkE/3NU3kCJv+7w==
+"@redwoodjs/api@^0.31.2":
+  version "0.31.2"
+  resolved "https://registry.yarnpkg.com/@redwoodjs/api/-/api-0.31.2.tgz#d519015c981e1a499c278d3bea1b4b561c69e481"
+  integrity sha512-y2SFGj6mz31GDd4aUqfcJFGGHbJF7b6BAazFgTg936BTz0PfLDoVTTb21fJpr4ho+Hs9w72Y4vfq5dj48/qzYA==
   dependencies:
     "@graphql-tools/merge" "6.2.10"
     "@prisma/client" "2.21.2"
-    "@redwoodjs/internal" "^0.31.0"
+    "@redwoodjs/internal" "^0.31.2"
     "@types/pino" "^6.3.7"
     apollo-server-lambda "2.22.2"
     core-js "3.10.1"
@@ -2210,18 +2192,6 @@
     core-js "3.10.1"
     pascalcase "1.0.0"
     react-hook-form "^6.9.5"
-
-"@redwoodjs/internal@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/internal/-/internal-0.31.0.tgz#5222f4df838ce2d9547bbc4178bf1c8172868981"
-  integrity sha512-LLS/zRfVFN9hfyx8Us/dMjMcOtSO7pNRKDvT4MOa1MbmeUz576i8FP437OLNrWeU2dt/BZL6LUVAQYdyFbcEWg==
-  dependencies:
-    "@babel/plugin-transform-typescript" "7.13.0"
-    deepmerge "^4.2.2"
-    findup-sync "^4.0.0"
-    glob "7.1.6"
-    kill-port "^1.6.1"
-    toml "^3.0.0"
 
 "@redwoodjs/internal@^0.31.2":
   version "0.31.2"
