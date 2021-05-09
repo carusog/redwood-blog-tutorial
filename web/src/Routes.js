@@ -7,13 +7,12 @@
 // 'src/pages/HomePage/HomePage.js'         -> HomePage
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
-import { useAuth } from '@redwoodjs/auth'
 import { Router, Route, Set, Private } from '@redwoodjs/router'
 import BlogLayout from 'src/layouts/BlogLayout/BlogLayout'
 
 const Routes = () => {
   return (
-    <Router useAuth={useAuth}>
+    <Router>
       <Set wrap={BlogLayout}>
         <Route path="/blog-post/{id:Int}" page={BlogPostPage} name="blogPost" />
         <Route path="/contact" page={ContactPage} name="contact" />
