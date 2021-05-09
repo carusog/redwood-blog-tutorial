@@ -2027,11 +2027,6 @@
     pino "^6.11.3"
     pino-pretty "^4.7.1"
 
-"@redwoodjs/auth@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.31.0.tgz#82e818561dab20dd89a55b772c93fbbc4fa4c41b"
-  integrity sha512-ICMwU2jrfCl5BSyOYVLBi2o1S3EqSsPRCnOPQr8btZm2R+jIe2d9dCcVGbhK/j7MTmxDQwIaHKIIKb3Ts672Ng==
-
 "@redwoodjs/auth@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.31.2.tgz#f936ab10a71218358732db4ad204d6773532d042"
@@ -2183,10 +2178,10 @@
   resolved "https://registry.yarnpkg.com/@redwoodjs/eslint-plugin-redwood/-/eslint-plugin-redwood-0.31.2.tgz#c177c5c18fca2bc2201b9c6ffde82b197904e8b8"
   integrity sha512-OFsC72KFeB1OuCA6VM+IuVPZy/inZTmJCBJNZ9XxuYvnic46N0Bi3YfSM+4MiqPGF9ZD0i7AizYIauYSzLmFmA==
 
-"@redwoodjs/forms@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/forms/-/forms-0.31.0.tgz#3c0c193afe5d446cb1e97cbf6d25f7b6f80ab938"
-  integrity sha512-5bTjZSu63vb6JY70a7KT0OK1o/5vsbgBqaLipfPrkFfDLxKYj+0trVxB7ZXk5v8yAPFdlYi1qASt6FgHeaBlNw==
+"@redwoodjs/forms@^0.31.2":
+  version "0.31.2"
+  resolved "https://registry.yarnpkg.com/@redwoodjs/forms/-/forms-0.31.2.tgz#678d8272857725ba69b38f59c72237b482863ba7"
+  integrity sha512-F+eyTCAM/JjZJUyPPgNuEQWKw+bR7POCAzKB8ZZLKPZE/+ij5V6fzRNXiVUZ8rWdYVFRVuXarvvLlHqXUpcgog==
   dependencies:
     "@types/pascalcase" "^1.0.0"
     core-js "3.10.1"
@@ -2218,16 +2213,6 @@
     "@redwoodjs/web" "^0.31.2"
     babel-plugin-ignore-html-and-css-imports "^0.1.0"
     node-fetch "^2.6.1"
-
-"@redwoodjs/router@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/router/-/router-0.31.0.tgz#b3da9df8228ae259cb4ab716123a54624eb82e2d"
-  integrity sha512-O+H/vvEI3EzuugmribtTQP+jusO4X9z8VYmKv9xUaxe7cReoNWoVLpMaSDFuWxxklVG9HxoLTvZbVN38tXBmLw==
-  dependencies:
-    "@reach/skip-nav" "^0.15.0"
-    "@redwoodjs/auth" "^0.31.0"
-    core-js "3.10.1"
-    lodash.isequal "^4.5.0"
 
 "@redwoodjs/router@^0.31.2":
   version "0.31.2"
@@ -2278,18 +2263,6 @@
     "@testing-library/react" "11.2.2"
     "@types/react" "17.0.3"
     msw "^0.21.2"
-
-"@redwoodjs/web@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/web/-/web-0.31.0.tgz#5a37e80ac673553f83698fb17b02f6dd4ba84acc"
-  integrity sha512-4ZPSI3c2T8DdGdLHncbqnfTUesDAWdY/0GD0UG7hoiiiw6DVI2UXAdNgY2MR+HOmGFxO9kZbc55ooFr4cv8T0g==
-  dependencies:
-    "@apollo/client" "^3.3.11"
-    "@redwoodjs/auth" "^0.31.0"
-    core-js "3.10.1"
-    graphql "^15.3.0"
-    proptypes "^1.1.0"
-    react-hot-toast "^1.0.2"
 
 "@redwoodjs/web@^0.31.2":
   version "0.31.2"
