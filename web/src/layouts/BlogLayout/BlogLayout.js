@@ -3,7 +3,6 @@ import { useAuth } from '@redwoodjs/auth'
 
 const BlogLayout = ({ children }) => {
   const { logIn, logOut, isAuthenticated, currentUser } = useAuth()
-
   return (
     <>
       <header>
@@ -28,17 +27,6 @@ const BlogLayout = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <pre
-        style={{
-          backgroundColor: 'lightgray',
-          padding: '1.5rem',
-          borderRadius: '1rem',
-          fontSize: '1rem',
-        }}
-      >
-        <h3 style={{ marginTop: '0' }}>currentUser object:</h3>
-        <code>{JSON.stringify(currentUser, null, 4)}</code>
-      </pre>
     </>
   )
 }
